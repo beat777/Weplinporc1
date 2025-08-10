@@ -1,0 +1,63 @@
+
+:root {
+  --brand: #6a1b1a;
+  --brand-dark: #511312;
+  --gold: #c8a15a;
+  --ink: #1f2937;
+  --bg: #faf9f7;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+header.hero {
+  position: relative;
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  isolation: isolate;
+}
+header.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('assets/hero-bg.jpeg') center/cover no-repeat;
+  filter: brightness(0.55);
+  z-index: -1;
+}
+nav {
+  background: white;
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+}
+footer {
+  background: #111;
+  color: #eee;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.btn {
+  background: var(--brand);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+.btn:hover {
+  background: var(--brand-dark);
+}
